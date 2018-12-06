@@ -1,0 +1,341 @@
+{
+  "workflow": {
+    "unique_name": "definition_workflow_01KuIk5mDkrViyq53Nrr7ztOCa01nv2QD",
+    "name": "Get Target Info",
+    "title": "Get Target Info",
+    "type": "generic.workflow",
+    "base_type": "workflow",
+    "variables": [
+      {
+        "schema_id": "1CtpjFMqR68ZzciQOz1rQobzLj7",
+        "properties": {
+          "value": "aoadmin@cisco.com",
+          "scope": "local",
+          "name": "email",
+          "type": "datatype.string"
+        },
+        "unique_name": "variable_workflow_01KuJa2zdLCCVehk2tqz2t80mwqDeDwc9",
+        "object_type": ""
+      },
+      {
+        "schema_id": "1CtpjF0wGZxmvKSEBCmsD9qnB8n",
+        "properties": {
+          "scope": "local",
+          "name": "password",
+          "type": "datatype.secure_string"
+        },
+        "unique_name": "variable_workflow_01KuJcHp2lY3D7plBv8mcdGj89Q7uq7wc",
+        "object_type": ""
+      },
+      {
+        "schema_id": "1CtpjFMqR68ZzciQOz1rQobzLj7",
+        "properties": {
+          "value": "cisco",
+          "scope": "local",
+          "name": "tenant",
+          "type": "datatype.string"
+        },
+        "unique_name": "variable_workflow_01KuJdtyz1zWU8DnvQMntRBYCvdzfkF4D",
+        "object_type": ""
+      },
+      {
+        "schema_id": "1CtpjFMqR68ZzciQOz1rQobzLj7",
+        "properties": {
+          "value": "",
+          "scope": "local",
+          "name": "access_key",
+          "type": "datatype.string"
+        },
+        "unique_name": "variable_workflow_01KuK4iyniGPXNsR3vAfDOdhfNmjEyNR9",
+        "object_type": ""
+      },
+      {
+        "schema_id": "1CtpjFMqR68ZzciQOz1rQobzLj7",
+        "properties": {
+          "value": "",
+          "scope": "output",
+          "name": "protocol",
+          "type": "datatype.string"
+        },
+        "unique_name": "variable_workflow_01KuMiCqNkfbAKOQSo6tPZA04OcQO1Js4",
+        "object_type": ""
+      },
+      {
+        "schema_id": "1CtpjFMqR68ZzciQOz1rQobzLj7",
+        "properties": {
+          "value": "",
+          "scope": "output",
+          "name": "port",
+          "type": "datatype.string"
+        },
+        "unique_name": "variable_workflow_01KuMkFkSAXkhsRDWKytFLUd2w47lfCPA",
+        "object_type": ""
+      },
+      {
+        "schema_id": "1CtpjFMqR68ZzciQOz1rQobzLj7",
+        "properties": {
+          "value": "",
+          "scope": "output",
+          "name": "host",
+          "type": "datatype.string"
+        },
+        "unique_name": "variable_workflow_01KuMmDPenjtOAKRrtQgKHuy6ymvbIfa8",
+        "object_type": ""
+      },
+      {
+        "schema_id": "1CtpjFMqR68ZzciQOz1rQobzLj7",
+        "properties": {
+          "value": "01KtuDB05BhLpNKnQtFFc2RbolzIhax7i",
+          "scope": "input",
+          "name": "instance_id",
+          "type": "datatype.string"
+        },
+        "unique_name": "variable_workflow_01KuIugOqcZeIpPeMZ9PL6QDNTQEhvyMs",
+        "object_type": ""
+      }
+    ],
+    "properties": {
+      "atomic": {
+        "is_atomic": false
+      },
+      "delete_workflow_instance": false,
+      "display_name": "Get Target Info",
+      "favorite": false,
+      "target": {
+        "target_type": "web-service.endpoint",
+        "target_id": "definition_target_1DIyMyOIQdXb8iihRu5vLomgGrC",
+        "execute_on_workflow_target": true
+      }
+    },
+    "object_type": "definition_workflow",
+    "actions": [
+      {
+        "unique_name": "definition_activity_01KuJ8j24QyPKpxgmuxmVOWWskkCUSODg",
+        "name": "HTTP Request",
+        "title": "Get Token",
+        "type": "web-service.http_request",
+        "base_type": "activity",
+        "properties": {
+          "action_timeout": 180,
+          "allow_auto_redirect": true,
+          "body": "{\n  \"username\": \"$workflow.definition_workflow_01KuIk5mDkrViyq53Nrr7ztOCa01nv2QD.local.variable_workflow_01KuJa2zdLCCVehk2tqz2t80mwqDeDwc9$\",\n  \"password\": \"$workflow.definition_workflow_01KuIk5mDkrViyq53Nrr7ztOCa01nv2QD.local.variable_workflow_01KuJcHp2lY3D7plBv8mcdGj89Q7uq7wc$\",\n  \"tenantName\": \"$workflow.definition_workflow_01KuIk5mDkrViyq53Nrr7ztOCa01nv2QD.local.variable_workflow_01KuJdtyz1zWU8DnvQMntRBYCvdzfkF4D$\"\n}",
+          "content_type": "application/json",
+          "continue_on_error_status_code": false,
+          "display_name": "Get Token",
+          "method": "POST",
+          "relative_url": "suite-auth/login",
+          "runtime_user": {
+            "override_target_runtime_user": false,
+            "target_default": true
+          },
+          "target": {
+            "override_workflow_target": false,
+            "override_workflow_target_group_criteria": false,
+            "use_workflow_target": true,
+            "use_workflow_target_group": false
+          }
+        },
+        "object_type": "definition_activity"
+      },
+      {
+        "unique_name": "definition_activity_01KuK6CA8qiYVJT3Mwqh6jsZrP5RqHI1p",
+        "name": "JSONPath Query",
+        "title": "JSONPath Query",
+        "type": "corejava.jsonpathquery",
+        "base_type": "activity",
+        "properties": {
+          "display_name": "JSONPath Query",
+          "input_json": "$activity.definition_activity_01KuJ8j24QyPKpxgmuxmVOWWskkCUSODg.output.response_body$",
+          "jsonpath_queries": [
+            {
+              "jsonpath_query": "$.token",
+              "jsonpath_query_name": "token",
+              "jsonpath_query_type": "string",
+              "zdate_type_format": ""
+            }
+          ]
+        },
+        "object_type": "definition_activity"
+      },
+      {
+        "unique_name": "definition_activity_01KuK5KDzUBPKaVNucAnPMF41lZExuINq",
+        "name": "Set Variables",
+        "title": "Set Variables",
+        "type": "core.set_multiple_variables",
+        "base_type": "activity",
+        "properties": {
+          "display_name": "Set Variables",
+          "variables_to_update": [
+            {
+              "variable_to_update": "$workflow.definition_workflow_01KuIk5mDkrViyq53Nrr7ztOCa01nv2QD.local.variable_workflow_01KuK4iyniGPXNsR3vAfDOdhfNmjEyNR9$",
+              "variable_value_new": "Bearer $activity.definition_activity_01KuK6CA8qiYVJT3Mwqh6jsZrP5RqHI1p.output.jsonpath_queries.token$"
+            }
+          ]
+        },
+        "object_type": "definition_activity"
+      },
+      {
+        "unique_name": "definition_activity_01KuKEUDlcF5eJDtEwDuPPw1u47qO0dBg",
+        "name": "HTTP Request",
+        "title": "Get WF Instance",
+        "type": "web-service.http_request",
+        "base_type": "activity",
+        "properties": {
+          "action_timeout": 180,
+          "allow_auto_redirect": true,
+          "content_type": "application/json",
+          "continue_on_error_status_code": false,
+          "custom_headers": [
+            {
+              "name": "Authorization",
+              "value": "$workflow.definition_workflow_01KuIk5mDkrViyq53Nrr7ztOCa01nv2QD.local.variable_workflow_01KuK4iyniGPXNsR3vAfDOdhfNmjEyNR9$"
+            }
+          ],
+          "display_name": "Get WF Instance",
+          "method": "GET",
+          "relative_url": "/be-console/api/v1/instances/$workflow.definition_workflow_01KuIk5mDkrViyq53Nrr7ztOCa01nv2QD.input.variable_workflow_01KuIugOqcZeIpPeMZ9PL6QDNTQEhvyMs$",
+          "runtime_user": {
+            "override_target_runtime_user": false,
+            "target_default": true
+          },
+          "target": {
+            "override_workflow_target": false,
+            "override_workflow_target_group_criteria": false,
+            "use_workflow_target": true,
+            "use_workflow_target_group": false
+          }
+        },
+        "object_type": "definition_activity"
+      },
+      {
+        "unique_name": "definition_activity_01KuLMGeDT5EryB3MMCPrJ2R3fX0RrY4R",
+        "name": "JSONPath Query",
+        "title": "JSONPath Query",
+        "type": "corejava.jsonpathquery",
+        "base_type": "activity",
+        "properties": {
+          "display_name": "JSONPath Query",
+          "input_json": "$activity.definition_activity_01KuKEUDlcF5eJDtEwDuPPw1u47qO0dBg.output.response_body$",
+          "jsonpath_queries": [
+            {
+              "jsonpath_query": "$.properties.target.target_id",
+              "jsonpath_query_name": "target_id",
+              "jsonpath_query_type": "string",
+              "zdate_type_format": ""
+            }
+          ]
+        },
+        "object_type": "definition_activity"
+      },
+      {
+        "unique_name": "definition_activity_01KuLKgyIriKfdefuwEm1vv6XKIRA32cn",
+        "name": "HTTP Request",
+        "title": "Get Target",
+        "type": "web-service.http_request",
+        "base_type": "activity",
+        "properties": {
+          "action_timeout": 180,
+          "allow_auto_redirect": true,
+          "content_type": "application/json",
+          "continue_on_error_status_code": false,
+          "custom_headers": [
+            {
+              "name": "Authorization",
+              "value": "$workflow.definition_workflow_01KuIk5mDkrViyq53Nrr7ztOCa01nv2QD.local.variable_workflow_01KuK4iyniGPXNsR3vAfDOdhfNmjEyNR9$"
+            }
+          ],
+          "display_name": "Get Target",
+          "method": "GET",
+          "relative_url": "/be-console/api/v1/targets/$activity.definition_activity_01KuLMGeDT5EryB3MMCPrJ2R3fX0RrY4R.output.jsonpath_queries.target_id$",
+          "runtime_user": {
+            "override_target_runtime_user": false,
+            "target_default": true
+          },
+          "target": {
+            "override_workflow_target": false,
+            "override_workflow_target_group_criteria": false,
+            "use_workflow_target": true,
+            "use_workflow_target_group": false
+          }
+        },
+        "object_type": "definition_activity"
+      },
+      {
+        "unique_name": "definition_activity_01KuM0SH5P0wet5kh7gTZrC33urnlYxBJ",
+        "name": "Execute Python Script",
+        "title": "Execute Python Script",
+        "type": "python.script",
+        "base_type": "activity",
+        "properties": {
+          "action_timeout": 180,
+          "display_name": "Execute Python Script",
+          "script": "import sys, json\n\nj = json.loads('$activity.definition_activity_01KuLKgyIriKfdefuwEm1vv6XKIRA32cn.output.response_body$')\n\nhost = j['properties'].get(\"host\")\n\nprotocol = j['properties'].get(\"protocol\")\nport = j['properties'].get(\"port\", \"null\")",
+          "script_queries": [
+            {
+              "script_query": "host",
+              "script_query_name": "host",
+              "script_query_type": "string"
+            },
+            {
+              "script_query": "protocol",
+              "script_query_name": "protocol",
+              "script_query_type": "string"
+            },
+            {
+              "script_query": "port",
+              "script_query_name": "port",
+              "script_query_type": "string"
+            }
+          ]
+        },
+        "object_type": "definition_activity"
+      },
+      {
+        "unique_name": "definition_activity_01KuMnugCLObt78d3TT8v45n4WzgXGDcC",
+        "name": "Set Variables",
+        "title": "Set Variables",
+        "type": "core.set_multiple_variables",
+        "base_type": "activity",
+        "properties": {
+          "display_name": "Set Variables",
+          "variables_to_update": [
+            {
+              "variable_to_update": "$workflow.definition_workflow_01KuIk5mDkrViyq53Nrr7ztOCa01nv2QD.output.variable_workflow_01KuMiCqNkfbAKOQSo6tPZA04OcQO1Js4$",
+              "variable_value_new": "$activity.definition_activity_01KuM0SH5P0wet5kh7gTZrC33urnlYxBJ.output.script_queries.protocol$"
+            },
+            {
+              "variable_to_update": "$workflow.definition_workflow_01KuIk5mDkrViyq53Nrr7ztOCa01nv2QD.output.variable_workflow_01KuMmDPenjtOAKRrtQgKHuy6ymvbIfa8$",
+              "variable_value_new": "$activity.definition_activity_01KuM0SH5P0wet5kh7gTZrC33urnlYxBJ.output.script_queries.host$"
+            },
+            {
+              "variable_to_update": "$workflow.definition_workflow_01KuIk5mDkrViyq53Nrr7ztOCa01nv2QD.output.variable_workflow_01KuMkFkSAXkhsRDWKytFLUd2w47lfCPA$",
+              "variable_value_new": "$activity.definition_activity_01KuM0SH5P0wet5kh7gTZrC33urnlYxBJ.output.script_queries.port$"
+            }
+          ]
+        },
+        "object_type": "definition_activity"
+      }
+    ],
+    "categories": [
+      "category_1BMfMXSnJMyt5Ihqi7rWJr5N8cf"
+    ]
+  },
+  "targets": {
+    "definition_target_1DIyMyOIQdXb8iihRu5vLomgGrC": {
+      "unique_name": "definition_target_1DIyMyOIQdXb8iihRu5vLomgGrC",
+      "name": "SUITE",
+      "title": "SUITE",
+      "type": "web-service.endpoint",
+      "base_type": "target",
+      "object_type": "definition_target",
+      "properties": {
+        "disable_certificate_validation": true,
+        "display_name": "SUITE",
+        "host": "172.21.46.110",
+        "no_runtime_user": true,
+        "port": 50261,
+        "protocol": "https"
+      }
+    }
+  }
+}
