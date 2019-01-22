@@ -10,66 +10,11 @@
         "schema_id": "01g2WX3yuL29EycXrZmqAIzfYRetGUqR0",
         "properties": {
           "value": "",
-          "scope": "local",
-          "name": "account_id",
-          "type": "datatype.string"
-        },
-        "unique_name": "variable_workflow_01gdiRS3UivydhAE4LnEgiDzwcqZzkZ9m",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "01g2WX3yuL29EycXrZmqAIzfYRetGUqR0",
-        "properties": {
-          "value": "",
           "scope": "input",
-          "name": "CO CostGroupType",
+          "name": "CO Billing Unit Name",
           "type": "datatype.string"
         },
-        "unique_name": "variable_workflow_01gdJKyUNEtk1oqJJi2IjFUUzLnwGbZN5",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "01g2WwylACOBBemRHjGJ6RV79CXXBcAZ1",
-        "properties": {
-          "value": false,
-          "scope": "local",
-          "name": "user_exists",
-          "type": "datatype.boolean"
-        },
-        "unique_name": "variable_workflow_01gdJnghFN3yqbnWgtLRFhdj4j9FSc6ab",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "01g2WX3yuL29EycXrZmqAIzfYRetGUqR0",
-        "properties": {
-          "value": "",
-          "scope": "input",
-          "name": "UserName",
-          "type": "datatype.string"
-        },
-        "unique_name": "variable_workflow_01gdJoZ74xOlVINDPplzjGyuDjn9Q1Zq2",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "01g2WwylACOBBemRHjGJ6RV79CXXBcAZ1",
-        "properties": {
-          "value": false,
-          "scope": "local",
-          "name": "test",
-          "type": "datatype.boolean"
-        },
-        "unique_name": "variable_workflow_01gdkbjaGz0UgcYhcVgU0pSO5H6vlinSG",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "01g2WX3yuL29EycXrZmqAIzfYRetGUqR0",
-        "properties": {
-          "value": "",
-          "scope": "input",
-          "name": "CO CostGroupName",
-          "type": "datatype.string"
-        },
-        "unique_name": "variable_workflow_01gdJiOiyo2qjYQRXAAlHEIcGlTFqivg5",
+        "unique_name": "variable_workflow_01gdyGYiby5caxmpYqRhsuhf0PilJVnvb",
         "object_type": "variable_workflow"
       },
       {
@@ -109,10 +54,75 @@
         "properties": {
           "value": "",
           "scope": "input",
-          "name": "CO Billing Unit Name",
+          "name": "UserName",
           "type": "datatype.string"
         },
-        "unique_name": "variable_workflow_01gdyGYiby5caxmpYqRhsuhf0PilJVnvb",
+        "unique_name": "variable_workflow_01gdJoZ74xOlVINDPplzjGyuDjn9Q1Zq2",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "01g2WX2wNCujg0RunZ2sBNptatl7tTCXN",
+        "properties": {
+          "scope": "local",
+          "name": "access_key",
+          "type": "datatype.secure_string"
+        },
+        "unique_name": "variable_workflow_01gdYn9rFQEnPTOg0OqMFsQLCVvPbgknj",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "01g2WX3yuL29EycXrZmqAIzfYRetGUqR0",
+        "properties": {
+          "value": "",
+          "scope": "input",
+          "name": "CO CostGroupName",
+          "type": "datatype.string"
+        },
+        "unique_name": "variable_workflow_01gdJiOiyo2qjYQRXAAlHEIcGlTFqivg5",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "01g2WwylACOBBemRHjGJ6RV79CXXBcAZ1",
+        "properties": {
+          "value": false,
+          "scope": "local",
+          "name": "test",
+          "type": "datatype.boolean"
+        },
+        "unique_name": "variable_workflow_01gdkbjaGz0UgcYhcVgU0pSO5H6vlinSG",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "01g2WwylACOBBemRHjGJ6RV79CXXBcAZ1",
+        "properties": {
+          "value": false,
+          "scope": "local",
+          "name": "user_exists",
+          "type": "datatype.boolean"
+        },
+        "unique_name": "variable_workflow_01gdJnghFN3yqbnWgtLRFhdj4j9FSc6ab",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "01g2WX3yuL29EycXrZmqAIzfYRetGUqR0",
+        "properties": {
+          "value": "",
+          "scope": "local",
+          "name": "account_id",
+          "type": "datatype.string"
+        },
+        "unique_name": "variable_workflow_01gdiRS3UivydhAE4LnEgiDzwcqZzkZ9m",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "01g2WX3yuL29EycXrZmqAIzfYRetGUqR0",
+        "properties": {
+          "value": "",
+          "scope": "input",
+          "name": "CO CostGroupType",
+          "type": "datatype.string"
+        },
+        "unique_name": "variable_workflow_01gdJKyUNEtk1oqJJi2IjFUUzLnwGbZN5",
         "object_type": "variable_workflow"
       },
       {
@@ -125,16 +135,6 @@
         },
         "unique_name": "variable_workflow_01gdJdQwaCjVQ3XamUj9CHH46njdy4Zo1",
         "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "01g2WX2wNCujg0RunZ2sBNptatl7tTCXN",
-        "properties": {
-          "scope": "local",
-          "name": "access_key",
-          "type": "datatype.secure_string"
-        },
-        "unique_name": "variable_workflow_01gdYn9rFQEnPTOg0OqMFsQLCVvPbgknj",
-        "object_type": "variable_workflow"
       }
     ],
     "properties": {
@@ -146,7 +146,7 @@
       "favorite": false,
       "target": {
         "target_type": "aws.endpoint",
-        "specify_on_workflow_start": true
+        "execute_on_workflow_target": true
       }
     },
     "object_type": "definition_workflow",
