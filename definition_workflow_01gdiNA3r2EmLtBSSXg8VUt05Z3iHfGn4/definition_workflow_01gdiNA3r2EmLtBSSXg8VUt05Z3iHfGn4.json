@@ -1,0 +1,727 @@
+{
+  "workflow": {
+    "unique_name": "definition_workflow_01gdiNA3r2EmLtBSSXg8VUt05Z3iHfGn4",
+    "name": "AWS Create Account WM-CO",
+    "title": "AWS Create Account WM-CO",
+    "type": "generic.workflow",
+    "base_type": "workflow",
+    "variables": [
+      {
+        "schema_id": "01g2WX3yuL29EycXrZmqAIzfYRetGUqR0",
+        "properties": {
+          "value": "",
+          "scope": "local",
+          "name": "account_id",
+          "type": "datatype.string"
+        },
+        "unique_name": "variable_workflow_01gdiRS3UivydhAE4LnEgiDzwcqZzkZ9m",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "01g2WX3yuL29EycXrZmqAIzfYRetGUqR0",
+        "properties": {
+          "value": "",
+          "scope": "input",
+          "name": "CO CostGroupType",
+          "type": "datatype.string"
+        },
+        "unique_name": "variable_workflow_01gdJKyUNEtk1oqJJi2IjFUUzLnwGbZN5",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "01g2WwylACOBBemRHjGJ6RV79CXXBcAZ1",
+        "properties": {
+          "value": false,
+          "scope": "local",
+          "name": "user_exists",
+          "type": "datatype.boolean"
+        },
+        "unique_name": "variable_workflow_01gdJnghFN3yqbnWgtLRFhdj4j9FSc6ab",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "01g2WX3yuL29EycXrZmqAIzfYRetGUqR0",
+        "properties": {
+          "value": "",
+          "scope": "input",
+          "name": "UserName",
+          "type": "datatype.string"
+        },
+        "unique_name": "variable_workflow_01gdJoZ74xOlVINDPplzjGyuDjn9Q1Zq2",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "01g2WwylACOBBemRHjGJ6RV79CXXBcAZ1",
+        "properties": {
+          "value": false,
+          "scope": "local",
+          "name": "test",
+          "type": "datatype.boolean"
+        },
+        "unique_name": "variable_workflow_01gdkbjaGz0UgcYhcVgU0pSO5H6vlinSG",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "01g2WX3yuL29EycXrZmqAIzfYRetGUqR0",
+        "properties": {
+          "value": "",
+          "scope": "input",
+          "name": "CO CostGroupName",
+          "type": "datatype.string"
+        },
+        "unique_name": "variable_workflow_01gdJiOiyo2qjYQRXAAlHEIcGlTFqivg5",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "01g2WX3yuL29EycXrZmqAIzfYRetGUqR0",
+        "properties": {
+          "value": "",
+          "scope": "input",
+          "name": "AccountEmail",
+          "type": "datatype.string"
+        },
+        "unique_name": "variable_workflow_01gdiZGKPJoomaTtHV7jrjQYkFhkZAeB2",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "01g2WX2wNCujg0RunZ2sBNptatl7tTCXN",
+        "properties": {
+          "scope": "local",
+          "name": "secret_key",
+          "type": "datatype.secure_string"
+        },
+        "unique_name": "variable_workflow_01gdvOiOQAVsF878HSZIUP1mlyzRTcqE1",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "01g2WwylACOBBemRHjGJ6RV79CXXBcAZ1",
+        "properties": {
+          "value": true,
+          "scope": "local",
+          "name": "Looper",
+          "type": "datatype.boolean"
+        },
+        "unique_name": "variable_workflow_01gdJM3s7yH6lBjnVY4dzTm1p0bSRAGts",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "01g2WX3yuL29EycXrZmqAIzfYRetGUqR0",
+        "properties": {
+          "value": "",
+          "scope": "input",
+          "name": "CO Billing Unit Name",
+          "type": "datatype.string"
+        },
+        "unique_name": "variable_workflow_01gdyGYiby5caxmpYqRhsuhf0PilJVnvb",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "01g2WX3yuL29EycXrZmqAIzfYRetGUqR0",
+        "properties": {
+          "value": "",
+          "scope": "input",
+          "name": "AccountName",
+          "type": "datatype.string"
+        },
+        "unique_name": "variable_workflow_01gdJdQwaCjVQ3XamUj9CHH46njdy4Zo1",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "01g2WX2wNCujg0RunZ2sBNptatl7tTCXN",
+        "properties": {
+          "scope": "local",
+          "name": "access_key",
+          "type": "datatype.secure_string"
+        },
+        "unique_name": "variable_workflow_01gdYn9rFQEnPTOg0OqMFsQLCVvPbgknj",
+        "object_type": "variable_workflow"
+      }
+    ],
+    "properties": {
+      "atomic": {
+        "is_atomic": false
+      },
+      "delete_workflow_instance": false,
+      "display_name": "AWS Create Account WM-CO",
+      "favorite": false,
+      "target": {
+        "target_type": "aws.endpoint",
+        "specify_on_workflow_start": true
+      }
+    },
+    "object_type": "definition_workflow",
+    "actions": [
+      {
+        "unique_name": "definition_activity_01gdioDxE6oQXDLe0qvJAtY3jjNY3Na0S",
+        "name": "Condition Block",
+        "title": "Condition Block",
+        "type": "logic.if_else",
+        "base_type": "activity",
+        "properties": {
+          "display_name": "Condition Block"
+        },
+        "object_type": "definition_activity",
+        "blocks": [
+          {
+            "unique_name": "definition_activity_01gdioEspCYmHyJwRNwjZSNNVgI9WNmyP",
+            "name": "Condition Branch",
+            "title": "Not Testing",
+            "type": "logic.condition_block",
+            "base_type": "activity",
+            "properties": {
+              "condition": {
+                "left_operand": "$workflow.definition_workflow_01gdiNA3r2EmLtBSSXg8VUt05Z3iHfGn4.local.variable_workflow_01gdkbjaGz0UgcYhcVgU0pSO5H6vlinSG$",
+                "operator": "eq",
+                "right_operand": false
+              },
+              "continue_on_failure": false,
+              "display_name": "Not Testing"
+            },
+            "object_type": "definition_activity",
+            "actions": [
+              {
+                "unique_name": "definition_activity_01gdkn6qOzng6YZoMofpx3S896wVH6obD",
+                "name": "AWS Create Account",
+                "title": "Create Account",
+                "type": "aws.create_account",
+                "base_type": "activity",
+                "properties": {
+                  "account_name": "$workflow.definition_workflow_01gdiNA3r2EmLtBSSXg8VUt05Z3iHfGn4.input.variable_workflow_01gdJdQwaCjVQ3XamUj9CHH46njdy4Zo1$",
+                  "action_timeout": 180,
+                  "continue_on_failure": false,
+                  "display_name": "Create Account",
+                  "email": "$workflow.definition_workflow_01gdiNA3r2EmLtBSSXg8VUt05Z3iHfGn4.input.variable_workflow_01gdiZGKPJoomaTtHV7jrjQYkFhkZAeB2$",
+                  "runtime_user": {
+                    "override_target_runtime_user": false,
+                    "target_default": true
+                  },
+                  "target": {
+                    "override_workflow_target": false,
+                    "override_workflow_target_group_criteria": false,
+                    "use_workflow_target": true,
+                    "use_workflow_target_group": false
+                  }
+                },
+                "object_type": "definition_activity"
+              },
+              {
+                "unique_name": "definition_activity_01gdmaONFVLk3ivYRTbXulNXBsmTbUBmG",
+                "name": "While Loop",
+                "title": "While Loop",
+                "type": "logic.while",
+                "base_type": "activity",
+                "properties": {
+                  "display_name": "While Loop"
+                },
+                "object_type": "definition_activity",
+                "blocks": [
+                  {
+                    "unique_name": "definition_activity_01gdmatIoYmc0RzqwDAJsdhDnNgedMAsZ",
+                    "name": "Condition Branch",
+                    "title": "Account Not Yet Created",
+                    "type": "logic.condition_block",
+                    "base_type": "activity",
+                    "properties": {
+                      "condition": {
+                        "left_operand": "$workflow.definition_workflow_01gdiNA3r2EmLtBSSXg8VUt05Z3iHfGn4.local.variable_workflow_01gdJM3s7yH6lBjnVY4dzTm1p0bSRAGts$",
+                        "operator": "eq",
+                        "right_operand": "true"
+                      },
+                      "continue_on_failure": false,
+                      "display_name": "Account Not Yet Created"
+                    },
+                    "object_type": "definition_activity",
+                    "actions": [
+                      {
+                        "unique_name": "definition_activity_01gdmi4bOJ9uhusZtfiNEd0ICow5zkkqn",
+                        "name": "Create Account Statuses",
+                        "title": "Create Account Statuses",
+                        "type": "aws.list_create_account_status",
+                        "base_type": "activity",
+                        "properties": {
+                          "action_timeout": 180,
+                          "continue_on_failure": false,
+                          "display_name": "Create Account Statuses",
+                          "runtime_user": {
+                            "override_target_runtime_user": false,
+                            "target_default": true
+                          },
+                          "states": [
+                            "SUCCEEDED",
+                            "FAILED",
+                            "IN_PROGRESS"
+                          ],
+                          "target": {
+                            "override_workflow_target": false,
+                            "override_workflow_target_group_criteria": false,
+                            "use_workflow_target": true,
+                            "use_workflow_target_group": false
+                          }
+                        },
+                        "object_type": "definition_activity"
+                      },
+                      {
+                        "unique_name": "definition_activity_01gdmMusS1X9HPIClhlaCW89HZ2j1OFnN",
+                        "name": "For Each",
+                        "title": "For Each",
+                        "type": "logic.for_each",
+                        "base_type": "activity",
+                        "properties": {
+                          "continue_on_failure": false,
+                          "display_name": "For Each",
+                          "source_array": "$activity.definition_activity_01gdmi4bOJ9uhusZtfiNEd0ICow5zkkqn.output.create_account_statuses$"
+                        },
+                        "object_type": "definition_activity",
+                        "actions": [
+                          {
+                            "unique_name": "definition_activity_01gdmNFnaMGDtkvgiytQXimBebssIrW0f",
+                            "name": "Condition Block",
+                            "title": "Condition Block",
+                            "type": "logic.if_else",
+                            "base_type": "activity",
+                            "properties": {
+                              "display_name": "Condition Block"
+                            },
+                            "object_type": "definition_activity",
+                            "blocks": [
+                              {
+                                "unique_name": "definition_activity_01gdmNh4BqrMTOML4yv2XUDHiuAE1uHKz",
+                                "name": "Condition Branch",
+                                "title": "Account Succeeded",
+                                "type": "logic.condition_block",
+                                "base_type": "activity",
+                                "properties": {
+                                  "condition": {
+                                    "left_operand": {
+                                      "left_operand": "$activity.definition_activity_01gdmMusS1X9HPIClhlaCW89HZ2j1OFnN.input.source_array[@].id$",
+                                      "operator": "eq",
+                                      "right_operand": "$activity.definition_activity_01gdkn6qOzng6YZoMofpx3S896wVH6obD.output.id$"
+                                    },
+                                    "operator": "and",
+                                    "right_operand": {
+                                      "left_operand": "$activity.definition_activity_01gdmMusS1X9HPIClhlaCW89HZ2j1OFnN.input.source_array[@].state$",
+                                      "operator": "eq",
+                                      "right_operand": "SUCCEEDED"
+                                    }
+                                  },
+                                  "continue_on_failure": false,
+                                  "display_name": "Account Succeeded"
+                                },
+                                "object_type": "definition_activity",
+                                "actions": [
+                                  {
+                                    "unique_name": "definition_activity_01gdNSxYAcKA9eIKKtwdlgd3Cd6ItJ16T",
+                                    "name": "Set Variables",
+                                    "title": "Set Variables",
+                                    "type": "core.set_multiple_variables",
+                                    "base_type": "activity",
+                                    "properties": {
+                                      "continue_on_failure": false,
+                                      "display_name": "Set Variables",
+                                      "variables_to_update": [
+                                        {
+                                          "variable_to_update": "$workflow.definition_workflow_01gdiNA3r2EmLtBSSXg8VUt05Z3iHfGn4.local.variable_workflow_01gdJM3s7yH6lBjnVY4dzTm1p0bSRAGts$",
+                                          "variable_value_new": false
+                                        },
+                                        {
+                                          "variable_to_update": "$workflow.definition_workflow_01gdiNA3r2EmLtBSSXg8VUt05Z3iHfGn4.local.variable_workflow_01gdiRS3UivydhAE4LnEgiDzwcqZzkZ9m$",
+                                          "variable_value_new": "$activity.definition_activity_01gdmMusS1X9HPIClhlaCW89HZ2j1OFnN.input.source_array[@].account_id$"
+                                        }
+                                      ]
+                                    },
+                                    "object_type": "definition_activity"
+                                  }
+                                ]
+                              },
+                              {
+                                "unique_name": "definition_activity_01gdmNhSxzkvDbwdT9rIlPBhOfzmefznw",
+                                "name": "Condition Branch",
+                                "title": "Account Failed",
+                                "type": "logic.condition_block",
+                                "base_type": "activity",
+                                "properties": {
+                                  "condition": {
+                                    "left_operand": {
+                                      "left_operand": "$activity.definition_activity_01gdmMusS1X9HPIClhlaCW89HZ2j1OFnN.input.source_array[@].id$",
+                                      "operator": "eq",
+                                      "right_operand": "$activity.definition_activity_01gdkn6qOzng6YZoMofpx3S896wVH6obD.output.id$"
+                                    },
+                                    "operator": "and",
+                                    "right_operand": {
+                                      "left_operand": "$activity.definition_activity_01gdmMusS1X9HPIClhlaCW89HZ2j1OFnN.input.source_array[@].state$",
+                                      "operator": "eq",
+                                      "right_operand": "FAILED"
+                                    }
+                                  },
+                                  "continue_on_failure": false,
+                                  "display_name": "Account Failed"
+                                },
+                                "object_type": "definition_activity",
+                                "actions": [
+                                  {
+                                    "unique_name": "definition_activity_01gdnu1R8b1vL5C1goYMYe53a2US58aZE",
+                                    "name": "Failed",
+                                    "title": "Succeeded",
+                                    "type": "logic.completed",
+                                    "base_type": "activity",
+                                    "properties": {
+                                      "completion_type": "failed-completed",
+                                      "display_name": "Failed",
+                                      "result_message": "Create Account Failed: "
+                                    },
+                                    "object_type": "definition_activity"
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "unique_name": "definition_activity_01gdph9T0MIvJ43qr9wgQhX28qTeEU6Ya",
+        "name": "IAM List Users",
+        "title": "IAM List Users",
+        "type": "aws.iam_list_user",
+        "base_type": "activity",
+        "properties": {
+          "action_timeout": 180,
+          "continue_on_failure": false,
+          "display_name": "IAM List Users",
+          "runtime_user": {
+            "override_target_runtime_user": false,
+            "target_default": true
+          },
+          "target": {
+            "use_workflow_target": true
+          }
+        },
+        "object_type": "definition_activity"
+      },
+      {
+        "unique_name": "definition_activity_01gdpGp4iaBscvnDNAbSAmVCRszMV4tJ5",
+        "name": "For Each",
+        "title": "For Each",
+        "type": "logic.for_each",
+        "base_type": "activity",
+        "properties": {
+          "continue_on_failure": false,
+          "display_name": "For Each",
+          "source_array": "$activity.definition_activity_01gdph9T0MIvJ43qr9wgQhX28qTeEU6Ya.output.user_ids$"
+        },
+        "object_type": "definition_activity",
+        "actions": [
+          {
+            "unique_name": "definition_activity_01gdpphQg9uEx1ZL2ZkLO10xnjcfRhTz5",
+            "name": "Condition Block",
+            "title": "Condition Block",
+            "type": "logic.if_else",
+            "base_type": "activity",
+            "properties": {
+              "display_name": "Condition Block"
+            },
+            "object_type": "definition_activity",
+            "blocks": [
+              {
+                "unique_name": "definition_activity_01gdppQDfANsf4KTPXlM8FqMJOuJ6taVM",
+                "name": "Condition Branch",
+                "title": "Condition Branch",
+                "type": "logic.condition_block",
+                "base_type": "activity",
+                "properties": {
+                  "condition": {
+                    "left_operand": "$activity.definition_activity_01gdpGp4iaBscvnDNAbSAmVCRszMV4tJ5.input.source_array[@].username$",
+                    "operator": "eq",
+                    "right_operand": "$workflow.definition_workflow_01gdiNA3r2EmLtBSSXg8VUt05Z3iHfGn4.input.variable_workflow_01gdJoZ74xOlVINDPplzjGyuDjn9Q1Zq2$"
+                  },
+                  "continue_on_failure": false,
+                  "display_name": "Condition Branch"
+                },
+                "object_type": "definition_activity",
+                "actions": [
+                  {
+                    "unique_name": "definition_activity_01gdpNG8afHEiK0saOXXrJpJVeFJ7WZpB",
+                    "name": "Set Variables",
+                    "title": "Set Variables",
+                    "type": "core.set_multiple_variables",
+                    "base_type": "activity",
+                    "properties": {
+                      "continue_on_failure": false,
+                      "display_name": "Set Variables",
+                      "variables_to_update": [
+                        {
+                          "variable_to_update": "$workflow.definition_workflow_01gdiNA3r2EmLtBSSXg8VUt05Z3iHfGn4.local.variable_workflow_01gdJnghFN3yqbnWgtLRFhdj4j9FSc6ab$",
+                          "variable_value_new": true
+                        }
+                      ]
+                    },
+                    "object_type": "definition_activity"
+                  },
+                  {
+                    "unique_name": "definition_activity_01gdpUECEm6O2tNOCMPRbhRYJewLArF7E",
+                    "name": "Break",
+                    "title": "Break",
+                    "type": "logic.break",
+                    "base_type": "activity",
+                    "properties": {
+                      "display_name": "Break"
+                    },
+                    "object_type": "definition_activity"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "unique_name": "definition_activity_01gdpwHnt6xT36me3spCaO362CvfcYC8s",
+        "name": "Condition Block",
+        "title": "Condition Block",
+        "type": "logic.if_else",
+        "base_type": "activity",
+        "properties": {
+          "continue_on_failure": false,
+          "display_name": "Condition Block"
+        },
+        "object_type": "definition_activity",
+        "blocks": [
+          {
+            "unique_name": "definition_activity_01gdpwJbDqzik7fhSgMKrMdh4YKiUQi27",
+            "name": "Condition Branch",
+            "title": "Condition Branch",
+            "type": "logic.condition_block",
+            "base_type": "activity",
+            "properties": {
+              "condition": {
+                "left_operand": "$workflow.definition_workflow_01gdiNA3r2EmLtBSSXg8VUt05Z3iHfGn4.local.variable_workflow_01gdJnghFN3yqbnWgtLRFhdj4j9FSc6ab$",
+                "operator": "eq",
+                "right_operand": false
+              },
+              "continue_on_failure": false,
+              "display_name": "Condition Branch"
+            },
+            "object_type": "definition_activity",
+            "actions": [
+              {
+                "unique_name": "definition_activity_01gdrdQB4T71sTIXSD4nPRoJiHhiTesbr",
+                "name": "IAM Create User",
+                "title": "IAM Create User",
+                "type": "aws.iam_create_user",
+                "base_type": "activity",
+                "properties": {
+                  "action_timeout": 180,
+                  "continue_on_failure": false,
+                  "display_name": "IAM Create User",
+                  "runtime_user": {
+                    "override_target_runtime_user": false,
+                    "target_default": true
+                  },
+                  "target": {
+                    "override_workflow_target": false,
+                    "override_workflow_target_group_criteria": false,
+                    "use_workflow_target": true,
+                    "use_workflow_target_group": false
+                  },
+                  "username": "$workflow.definition_workflow_01gdiNA3r2EmLtBSSXg8VUt05Z3iHfGn4.input.variable_workflow_01gdJdQwaCjVQ3XamUj9CHH46njdy4Zo1$"
+                },
+                "object_type": "definition_activity"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "unique_name": "definition_activity_01gdrIiDxgrPsXalNwtuihwsj2epiJAqP",
+        "name": "IAM Attach User Policy",
+        "title": "IAM Attach User Policy",
+        "type": "aws.iam_attach_user_policy",
+        "base_type": "activity",
+        "properties": {
+          "action_timeout": 180,
+          "continue_on_failure": false,
+          "display_name": "IAM Attach User Policy",
+          "policy_arn": "arn:aws:iam::aws:policy/AdministratorAccess",
+          "runtime_user": {
+            "override_target_runtime_user": false,
+            "target_default": true
+          },
+          "target": {
+            "override_workflow_target": false,
+            "override_workflow_target_group_criteria": false,
+            "use_workflow_target": true,
+            "use_workflow_target_group": false
+          },
+          "username": "$workflow.definition_workflow_01gdiNA3r2EmLtBSSXg8VUt05Z3iHfGn4.input.variable_workflow_01gdJoZ74xOlVINDPplzjGyuDjn9Q1Zq2$"
+        },
+        "object_type": "definition_activity"
+      },
+      {
+        "unique_name": "definition_activity_01gdrleC64u3qdyt5IbZYmr4Hp4mDjKP1",
+        "name": "IAM Create Access Key",
+        "title": "IAM Create Access Key",
+        "type": "aws.iam_create_access_key",
+        "base_type": "activity",
+        "properties": {
+          "action_timeout": 180,
+          "continue_on_failure": false,
+          "display_name": "IAM Create Access Key",
+          "runtime_user": {
+            "override_target_runtime_user": false,
+            "target_default": true
+          },
+          "target": {
+            "override_workflow_target": false,
+            "override_workflow_target_group_criteria": false,
+            "use_workflow_target": true,
+            "use_workflow_target_group": false
+          },
+          "username": "$workflow.definition_workflow_01gdiNA3r2EmLtBSSXg8VUt05Z3iHfGn4.input.variable_workflow_01gdJoZ74xOlVINDPplzjGyuDjn9Q1Zq2$"
+        },
+        "object_type": "definition_activity"
+      },
+      {
+        "unique_name": "definition_activity_01gdrNdCaL0ceT3OCgNUqaXTKV4ZTLR1Q",
+        "name": "Sleep",
+        "title": "Sleep",
+        "type": "core.sleep",
+        "base_type": "activity",
+        "properties": {
+          "continue_on_failure": false,
+          "display_name": "Sleep",
+          "sleep_interval": 60
+        },
+        "object_type": "definition_activity"
+      },
+      {
+        "unique_name": "definition_activity_01gdvoGILDpiVOTfREFf2TUt9iu90IrMs",
+        "name": "Set Variables",
+        "title": "Set Variables",
+        "type": "core.set_multiple_variables",
+        "base_type": "activity",
+        "properties": {
+          "continue_on_failure": false,
+          "display_name": "Set Variables",
+          "variables_to_update": [
+            {
+              "variable_to_update": "$workflow.definition_workflow_01gdiNA3r2EmLtBSSXg8VUt05Z3iHfGn4.local.variable_workflow_01gdvOiOQAVsF878HSZIUP1mlyzRTcqE1$",
+              "variable_value_new": "$activity.definition_activity_01gdrleC64u3qdyt5IbZYmr4Hp4mDjKP1.output.secret_access_key$"
+            },
+            {
+              "variable_to_update": "$workflow.definition_workflow_01gdiNA3r2EmLtBSSXg8VUt05Z3iHfGn4.local.variable_workflow_01gdYn9rFQEnPTOg0OqMFsQLCVvPbgknj$",
+              "variable_value_new": "$activity.definition_activity_01gdrleC64u3qdyt5IbZYmr4Hp4mDjKP1.output.access_key_id$"
+            }
+          ]
+        },
+        "object_type": "definition_activity"
+      },
+      {
+        "unique_name": "definition_activity_01gdscjSQHh48GCA0n04UqhLjRwnqmfVr",
+        "name": "Add Cloud Account",
+        "title": "Add Cloud Account",
+        "type": "ccs.add_cloud_account",
+        "base_type": "activity",
+        "properties": {
+          "access_key": "$workflow.definition_workflow_01gdiNA3r2EmLtBSSXg8VUt05Z3iHfGn4.local.variable_workflow_01gdYn9rFQEnPTOg0OqMFsQLCVvPbgknj$",
+          "action_timeout": 180,
+          "aws_account_number": "$workflow.definition_workflow_01gdiNA3r2EmLtBSSXg8VUt05Z3iHfGn4.local.variable_workflow_01gdiRS3UivydhAE4LnEgiDzwcqZzkZ9m$",
+          "aws_email": "$workflow.definition_workflow_01gdiNA3r2EmLtBSSXg8VUt05Z3iHfGn4.input.variable_workflow_01gdiZGKPJoomaTtHV7jrjQYkFhkZAeB2$",
+          "cloud_account_name": "$workflow.definition_workflow_01gdiNA3r2EmLtBSSXg8VUt05Z3iHfGn4.input.variable_workflow_01gdJdQwaCjVQ3XamUj9CHH46njdy4Zo1$",
+          "cloud_family": "Amazon",
+          "cloud_instance": "1",
+          "continue_on_failure": false,
+          "display_name": "Add Cloud Account",
+          "kube_account_token": false,
+          "runtime_user": {
+            "override_target_runtime_user": false,
+            "target_default": true
+          },
+          "secret_key": "$workflow.definition_workflow_01gdiNA3r2EmLtBSSXg8VUt05Z3iHfGn4.local.variable_workflow_01gdvOiOQAVsF878HSZIUP1mlyzRTcqE1$",
+          "target": {
+            "override_workflow_target": true,
+            "target_id": "definition_target_01f9IQgvQRJv3tvlqwR145Bbrye0toH0Q"
+          }
+        },
+        "object_type": "definition_activity"
+      },
+      {
+        "unique_name": "definition_activity_01gdy3YJyuIW4RYvELa7IIq4AWYhaVAS7",
+        "name": "Find Cost Group Type",
+        "title": "Find Cost Group Type",
+        "type": "ccs.get_cost_group_type",
+        "base_type": "activity",
+        "properties": {
+          "action_timeout": 180,
+          "continue_on_failure": false,
+          "cost_group_type": "$workflow.definition_workflow_01gdiNA3r2EmLtBSSXg8VUt05Z3iHfGn4.input.variable_workflow_01gdJKyUNEtk1oqJJi2IjFUUzLnwGbZN5$",
+          "display_name": "Find Cost Group Type",
+          "runtime_user": {
+            "override_target_runtime_user": false,
+            "target_default": true
+          },
+          "target": {
+            "override_workflow_target": true,
+            "target_id": "definition_target_01f9IQgvQRJv3tvlqwR145Bbrye0toH0Q"
+          }
+        },
+        "object_type": "definition_activity"
+      },
+      {
+        "unique_name": "definition_activity_01gdy8RjS3wDbWlNDvGztpJzvVgbzXT4y",
+        "name": "Find Cost Group",
+        "title": "Find Cost Group",
+        "type": "ccs.get_cost_groups",
+        "base_type": "activity",
+        "properties": {
+          "action_timeout": 180,
+          "continue_on_failure": false,
+          "cost_group_name": "$workflow.definition_workflow_01gdiNA3r2EmLtBSSXg8VUt05Z3iHfGn4.input.variable_workflow_01gdJiOiyo2qjYQRXAAlHEIcGlTFqivg5$",
+          "cost_group_type_id": "$activity.definition_activity_01gdy3YJyuIW4RYvELa7IIq4AWYhaVAS7.output.id$",
+          "display_name": "Find Cost Group",
+          "runtime_user": {
+            "override_target_runtime_user": false,
+            "target_default": true
+          },
+          "target": {
+            "override_workflow_target": true,
+            "target_id": "definition_target_01f9IQgvQRJv3tvlqwR145Bbrye0toH0Q"
+          }
+        },
+        "object_type": "definition_activity"
+      },
+      {
+        "unique_name": "definition_activity_01gdyBZWWMPvkNXTqR1htB9JerxNsomfl",
+        "name": "Find Billing Unit",
+        "title": "Find Billing Unit",
+        "type": "ccs.billing_unit",
+        "base_type": "activity",
+        "properties": {
+          "action_timeout": 180,
+          "billing_unit_name": "$workflow.definition_workflow_01gdiNA3r2EmLtBSSXg8VUt05Z3iHfGn4.input.variable_workflow_01gdyGYiby5caxmpYqRhsuhf0PilJVnvb$",
+          "continue_on_failure": false,
+          "cost_group_type_id": "$activity.definition_activity_01gdy3YJyuIW4RYvELa7IIq4AWYhaVAS7.output.id$",
+          "display_name": "Find Billing Unit",
+          "runtime_user": {
+            "override_target_runtime_user": false,
+            "target_default": true
+          },
+          "target": {
+            "override_workflow_target": true,
+            "target_id": "definition_target_01f9IQgvQRJv3tvlqwR145Bbrye0toH0Q"
+          }
+        },
+        "object_type": "definition_activity"
+      }
+    ],
+    "categories": [
+      "category_1BMfMXSnJMyt5Ihqi7rWJr5N8cf"
+    ]
+  }
+}
