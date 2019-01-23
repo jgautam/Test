@@ -17,6 +17,17 @@
         },
         "unique_name": "variable_workflow_01gEJcAyl5WSdscHb2C19cTZ9vmwUCkTG",
         "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "01g2WX3yuL29EycXrZmqAIzfYRetGUqR0",
+        "properties": {
+          "value": "us-east-1",
+          "scope": "local",
+          "name": "AWS REGION",
+          "type": "datatype.string"
+        },
+        "unique_name": "variable_workflow_01gEQ4Beh6eW23Q0ZSb0BR6pHZc6xkkg9",
+        "object_type": "variable_workflow"
       }
     ],
     "properties": {
@@ -83,6 +94,31 @@
             "use_workflow_target_group": false
           },
           "vpc_id": "$activity.definition_activity_01gEiqPE0egewuhA4WGcSsK3Uip7e4HxV.output.vpc_id$"
+        },
+        "object_type": "definition_activity"
+      },
+      {
+        "unique_name": "definition_activity_01gEOBJieSAEMxGOfsjftAxKD5CnFUQ6M",
+        "name": "Generic AWS API Request",
+        "title": "Generic AWS API Request",
+        "type": "aws.api_request",
+        "base_type": "activity",
+        "properties": {
+          "action_timeout": 180,
+          "api_call_method": "POST",
+          "api_url": "https://ec2.$workflow.definition_workflow_01gEiPHdGH2nWBT8lVAmUDSW4HVXg5znB.local.variable_workflow_01gEQ4Beh6eW23Q0ZSb0BR6pHZc6xkkg9$.amazonaws.com/?Action=ModifySubnetAttribute\u0026SubnetId=$activity.definition_activity_01gEJetpMDBpB8vzSAbFdHF0oMXoOLBDZ.output.subnet_id$\u0026MapPublicIpOnLaunch.Value=true\u0026Version=2016-11-15",
+          "continue_on_failure": false,
+          "display_name": "Generic AWS API Request",
+          "runtime_user": {
+            "override_target_runtime_user": false,
+            "target_default": true
+          },
+          "target": {
+            "override_workflow_target": false,
+            "override_workflow_target_group_criteria": false,
+            "use_workflow_target": true,
+            "use_workflow_target_group": false
+          }
         },
         "object_type": "definition_activity"
       },
